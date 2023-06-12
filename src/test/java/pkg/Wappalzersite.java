@@ -20,7 +20,7 @@ public class Wappalzersite {
 	}
 	
 	@ Test
-	public void test() {
+	public void test() throws Exception {
 		driver.findElement(By.xpath("//div[@class='d-none d-md-block flex-grow-1 flex-shrink-0 text-right col']/button[2]/span")).click();
 		driver.findElement(By.xpath("//a[@href='/technologies/']/div/div[1]")).click();
 
@@ -29,10 +29,9 @@ public class Wappalzersite {
 		driver.findElement(By.xpath("//a[@href='/technologies/ecommerce/shopify/']/div/div/div[2]/span")).click();
 		driver.findElement(By.xpath("//a[@class='mt-2 v-btn v-btn--has-bg v-btn--router theme--light v-size--large primary']/span")).click();
 		
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='v-expansion-panel-header subtitle-2 v-expansion-panel-header--active']/span")));
+		Thread.sleep(3000);
 		driver.navigate().refresh();
-		driver.findElement(By.xpath("//button[@class='v-expansion-panel-header subtitle-2 v-expansion-panel-header--active']/span")).click();
-		driver.findElement(By.xpath("//input[@placeholder='E.g. ecommerce or Shopify']")).sendKeys("java");
+		driver.findElement(By.xpath("//input[@placeholder='Find a technology']")).click();;
+        driver.findElement(By.xpath("//input[@placeholder='E.g. ecommerce or Shopify']")).sendKeys("java",Keys.ENTER);
 	}
 }
