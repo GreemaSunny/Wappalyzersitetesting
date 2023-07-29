@@ -1,6 +1,6 @@
 # Wappalyzersitetesting
 End-to-end testing of Walppalyzer website
-TEST STEPS-
+**TEST STEPS-**
 1.Open https://www.wappalyzer.com/ 
 2.Click Resources 
 3.Click Technologies 
